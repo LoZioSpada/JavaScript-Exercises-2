@@ -4,12 +4,17 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-let x = 5;
+let x = 2
 let y = 3
+let result
+
 
 if (x > y) {
-  console.log(x > y); //il risultato è: true
+  result = `${x} è più grande di ${y}`
+} else{
+  result = `${x} è più piccolo di ${y}`
 }
+console.log(result)
 
 
 /*
@@ -92,23 +97,52 @@ Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carre
 C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
 Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+let shoppingCart = {
+  product1: 15,
+  product2: 20,
+  product3: 30,
+}
+
+let shipping = 0;
+
+shoppingCart = shoppingCart.product1 + shoppingCart.product2 + shoppingCart.product3;
+
+
+if (totalShoppingCart <= 50) {
+  shipping = 10;
+  totalShoppingCart = shoppingCart + shipping;
+} 
+
+console.log(totalShoppingCart); 
+
+
 
 /* ESERCIZIO EXTRA 3
   Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando, usando l'algoritmo del codice precedente, se le spedizioni siano gratuite oppure no e e calcolando il totale.
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+let totaleSconto = shoppingCart * 0.2;
+let blackFriday = shoppingCart - totaleSconto;
+
+if (blackFriday <= 50) {
+  shipping = 10;
+  blackFriday = shoppingCart - totaleSconto + shipping;
+}
+console.log(blackFriday);
+
+
 
 /*  ESERCIZIO EXTRA 4
   Usa un operatore ternaio per assegnare ad una variabile chiamata "gender" i valori "male" o "female".
   La scelta deve essere basata sul valore di un'altra variabile booleana chiamata isMale.
   Es. se isMale e' vero, il valore di gender deve essere "male"
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
+
 
 /* ESERCIZIO EXTRA 5
   Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3 (operatore modulo!), stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".
