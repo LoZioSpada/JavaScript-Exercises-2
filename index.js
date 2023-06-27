@@ -62,13 +62,13 @@ for (let i = 0; i <=10; i++) {
   Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare che il valore corrente sia pari o dispari, e mostrare il risultato in console.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-for (let x = 0; x <=15; x++) { 
-  if (x % 2 === 0) {
+for (let v = 0; v <=15; v++) { 
+  if (v % 2 === 0) {
     console.log("Pari");
-  } else if (x % 2!== 0) {
+  } else if (v % 2 !== 0) {
     console.log("Dispari");
   }
-  console.log(x);
+  console.log(v);
 }
 
 
@@ -78,11 +78,13 @@ for (let x = 0; x <=15; x++) {
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-let a = 16  //verificato cambiando a mano i valori di a & b
-let b = 8
+let a = 20  //verificato cambiando a mano i valori di a & b
+let b = 12
 
 if (a === 8 || b === 8) {
   console.log("Uno dei due numeri interi è uguale a 8");
+} else{
+  console.log("Uno dei due numeri interi NON è uguale a 8");
 }
 
 if (a+b && b+a === 8 || a-b === 8 || b-a === 8) {
@@ -148,4 +150,17 @@ console.log(isMale);
 /* ESERCIZIO EXTRA 5
   Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3 (operatore modulo!), stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".
 */
-
+for (let n = 1; n <= 100; n++) {
+  if (n % 3 === 0 && n % 5 === 0){
+    console.log("FizzBuzz");
+  }
+  if (n % 3 === 0){
+    console.log("Fizz");
+  }
+   else if (n % 5 === 0){
+    console.log("Buzz");
+  }
+  else {
+  console.log(n);
+  }
+}
