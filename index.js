@@ -23,14 +23,15 @@ ESERCIZIO 2
   num >= 20 - mostra in console "Huge"
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-let num = 0
+let num = 20
+
 if (num < 5) { 
   console.log("Tiny");
-} else if (num < 10) {
+} else if (num < 10 && num >= 5) {  //num >= 5 aggiunto dopo
   console.log("Small");
-} else if (num < 15){
+} else if (num < 15 && num >= 10) { //num >= 10 aggiunto dopo
   console.log("Medium");
-} else if (num < 20){
+} else if (num < 20 && num >= 15) { //num >= 15 aggiunto dopo
   console.log("Large");
 } else if (num >= 20) {
   console.log("Huge");
@@ -42,22 +43,49 @@ if (num < 5) {
 /* ESERCIZIO 3
   Mostra i numeri da 0 a 10 (incluso) in ordine ascendente, ma evitando di mostrare i numeri 3 e 8 (suggerimento: ripassa l'uso di "continue").
 *//* SCRIVI QUI LA TUA RISPOSTA */
+for (let i = 0; i <=10; i++) {
+  if (i === 3) {
+    continue;
+  }
+  if (i === 8){
+    continue;
+  }
+  console.log(i);
+}
 
 
-
-/* ESERCIZIO 11
-  Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare the il valore corrente sia pari o dispari, e mostrare il risultato in console.
+/* ESERCIZIO 4
+  Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare che il valore corrente sia pari o dispari, e mostrare il risultato in console.
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+for (let x = 0; x <=15; x++) { 
+  if (x % 2 === 0) {
+    console.log("Pari");
+  } else if (x % 2!== 0) {
+    console.log("Dispari");
+  }
+  console.log(x);
+}
+
 
 //ESERCIZI EXTRA NON OBBLIGATORI
 
 /* ESERCIZIO EXTRA 1
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+let a = 16  //verificato cambiando a mano i valori di a & b
+let b = 8
+
+if (a === 8 || b === 8) {
+  console.log("Uno dei due numeri interi è uguale a 8");
+}
+
+if (a+b && b+a === 8 || a-b === 8 || b-a === 8) {
+  console.log("L'addizione/sottrazione tra i due numeri interi è uguale a 8");
+} else {
+  console.log("L'addizione/sottrazione tra i due numeri interi NON è uguale a 8");
+}
 
 /* ESERCIZIO EXTRA 2
 Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
