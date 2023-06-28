@@ -141,8 +141,9 @@ console.log(blackFriday);
   Es. se isMale e' vero, il valore di gender deve essere "male"
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-let gender = "female"
-let isMale = gender === "male" ? "male" : "female";
+let gender 
+let isMale = true;
+isMale ? (gender = "male") : (gender = "female");
 
 console.log(isMale);
 
